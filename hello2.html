@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>data of previous web page</h2>
+    <div>Name : <span id="Name-U"></span></div>
+    <div>Email-Id : <span id="email-U"></span></div>
+    <script>
+        const name=localStorage.getItem('Name-U')
+        const email=localStorage.getItem('email-U')
+        document.getElementById('Name-U').textContent=name;
+        document.getElementById('email-U').textContent=email;
+    </script>
+</body>
+</html>

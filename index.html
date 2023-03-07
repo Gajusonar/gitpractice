@@ -1,2 +1,66 @@
-<h1>Hello World</h1>
-<p>hwllo brother</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        width: 300px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }   
+    
+    </style>
+</head>
+<body>
+    <form id="form">
+    <div>
+        <label for="firstName">First Name</label><br>
+        <input type="text" id="fristName">
+    </div>
+    <div>
+        <label for="LastName">Last Name</label><br>
+
+        <input type="text" id="LastName">
+    </div>
+    <div>
+        <label for="Mobileno">Mobile no</label><br>
+        <input type="text" id="Mono"><br>
+    </div>
+    <div>
+        <br><button type="submit">Next Page</button>
+    </div>
+
+</form>
+<script >
+  const form=document.getElementById('form');
+    const fristName = document.getElementById('fristName');
+    const LastName = document.getElementById('LastName');
+    const Mobileno = document.getElementById('Mono');
+
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      
+      const firtstNameValue = fristName.value;
+      const LastNameValue = LastName.value;
+      const MobilenoValue = Mobileno.value;
+
+      localStorage.setItem('first-Name',firtstNameValue);
+      localStorage.setItem('Last-Name',LastNameValue);
+      localStorage.setItem('Mobileno-Name',MobilenoValue);
+
+       window.location.href = "index2.html";
+      
+    })
+</script>
+</body>
+</html>

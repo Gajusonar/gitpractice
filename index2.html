@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>h2</title>
+    <style>body {display: flex; flex-direction: column; justify-content: center; align-items: center;}</style>
+</head>
+<body>
+    <h1>
+        Data from previous page
+    </h1>
+    <div>Frist Name : <br> <span id="first-Name"></span></div>
+    <div>Last Name : <br> <span id="Last-Name"></span></div>
+    <div>Mobile No : <br> <span id="Moblieno-Name"></span></div>
+
+        <script>
+          
+          const firstName = localStorage.getItem('first-Name');
+          const LastName = localStorage.getItem('Last-Name');
+          const Mobileno = localStorage.getItem('Mobileno-Name'); 
+ 
+            document.getElementById('first-Name').textContent = firstName;
+            document.getElementById('Last-Name').textContent = LastName;
+            document.getElementById('Moblieno-Name').textContent = Mobileno;
+
+        </script>
+</body>
+</html>
